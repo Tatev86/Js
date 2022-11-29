@@ -1,43 +1,16 @@
 
-const fname = prompt("Input Name");
-const lname = prompt("Input Surname");
-const userage = Number(prompt("Input age"));
-
-const user = (firstname, lastname, age) => {
-
-    if (isNaN(userage) === true) {
-        console.log("Enter Number!")
+const arr = [34, "hello",8,"test"]
+const  rev = (arr) => {
+    const newArr= [];
+    for (let i=arr.length-1; i>=0; i--){
+    newArr.push(arr[i]);
     }
-
-    while (!true); {
-        Number(prompt("Input age"));
-        if (userage) {
-            break;
-        }
-    }
-
-    const obj = {
-        firstname: firstname,
-        lastname: lastname,
-        age: age
-    }
-    return obj;
-
+return newArr  ;
 }
-
-const data = user(fname, lname, userage);
-console.log(data);
-
+ const reverse=rev(arr);
+  console.log (reverse);
 
 
 
 
-// function repet (text = "Hello", count = 4){
-//     let a = "";
-//     for (let i = 0; i <= count; i++){
-//         a += text;
-//        }
-//     return a;
-// }
-// const rest = repet ("Hi" , 2);
-// console.log (rest)
+
