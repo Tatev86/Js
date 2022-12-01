@@ -1,16 +1,13 @@
 
-const arr = [34, "hello",8,"test"]
-const  rev = (arr) => {
-    const newArr= [];
-    for (let i=arr.length-1; i>=0; i--){
-    newArr.push(arr[i]);
-    }
-return newArr  ;
+const arr = [34,1,88, "hello", 8, 0, " ","undefined","test"]
+let invalidId = 0;
+function filterByID(arr) {
+  if (Number.isFinite(arr) && arr !== 0) {
+    return true;
+  }
+  invalidId++;
+  return false;
 }
- const reverse=rev(arr);
-  console.log (reverse);
-
-
-
-
-
+const newArr = arr.filter(filterByID);
+console.log(newArr);
+console.log("Number of Invalid Entries = ", invalidId);
